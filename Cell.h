@@ -141,6 +141,10 @@ class Cell
 		}
 		Cell& operator= (const Cell& cell) 
 		{
+			if (this == &cell) 
+			{
+				return *this;
+			}
 			this->m_value = cell.m_value;
 			this->m_color = cell.m_color;
 			return *this;
